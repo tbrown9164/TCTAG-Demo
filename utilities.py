@@ -6,7 +6,7 @@ from robot.libraries.BuiltIn import BuiltIn
 
 
 def get_datetime():
-    return datetime.datetime.now().strftime("Y%Ym%mdH%HM%MS%S")
+    return datetime.datetime.now().strftime("Year:%Y month: %m day/hour:H%H Min: %M Sec: %S")
 
 
 def loadwebdriver():

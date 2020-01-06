@@ -2,6 +2,8 @@
 Documentation    Magenic Sample App
 Library          SeleniumLibrary
 Library          DateTime
+Library          mySQLAccess   WITH NAME  mySQLAccess
+Library          MongoDBLibrary
 Library          ImapLibrary
 Library          Website_Functions.py                   #case sensitive!
 Library          utilities.py            WITH NAME   my_code
@@ -9,7 +11,7 @@ Resource         website_keywords.robot
 Default Tags     CompanionMode   All  TopLevel   CRUD  LowLevel  DebugOnly   DontRun
 
 Suite Setup      GotoMagenicSite
-#Suite Teardown   Test Teardown
+Suite Teardown   Test Teardown
 
 *** Variables ***
 ${DateTime}
