@@ -37,6 +37,6 @@ def Input_Text_And_Ignore_Error(element_xpath=None, text=''):
 
 
 
-print ("hi there from website functions")
-now =   get_datetime()
-print(now)
+#print ("hi there from website functions")
+#now =   get_datetime()
+#print(now)
