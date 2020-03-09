@@ -16,7 +16,7 @@ Suite Teardown   Test Teardown
 *** Variables ***
 ${DateTime}
 ${MagenicURL} =    "http://magenic.com"
-${Browser}=   chrome
+${Browser}=   firefox
 
 *** Test Cases ***
 Set Speed and Get DateTime
