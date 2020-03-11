@@ -45,7 +45,7 @@ password.send_keys( Keys.RETURN )
 #we should be on this page now and able to scrape
 page = requests.get("https://dev.mtsecho.com/")
 
-page.status_code
+print('page status code', page.status_code)
 
 soup= BeautifulSoup(page.content, 'html.parser')
 
@@ -53,13 +53,16 @@ soup= BeautifulSoup(page.content, 'html.parser')
 
 
 #base_page = s.get('https://quora.com')
-#soup = BeautifulSoup(base_page.content, 'html.parser')
-#print("title:", soup.title)
+print("title:", soup.title)
 #print( soup.prettify() )
 #print('first a tag', soup.a)
 #a_list = soup.find( class_='BodyText' )
 #a_list = soup.find(class_="body")
-a_list= soup.find_all('a')
+
+a_list= soup.find_all('a', href=True)              #get all of the a tags that have an href link
+print ('element found with id=homeWhat:', soup.find(id='homeWhat'))
+print ('element found with id=Layer_1:', soup.find(id='Layer_1'))
+print ('element found with tag and text:', soup.find("a","//www.mts.com" ))
 
 i=0
 for item in a_list:
